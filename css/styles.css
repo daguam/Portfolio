@@ -10,11 +10,12 @@ body {
     color: #FFFFFF;
     background: #001f3f;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    position: relative; /* Added to position the language switcher relative to the body */
+    position: relative;
 }
 
 #particles-js {
@@ -37,7 +38,10 @@ h1 {
     animation: fadeIn 2s ease-in-out;
 }
 
-button {
+#cvButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     font-size: 1rem;
     padding: 10px 20px;
     color: #FFFFFF;
@@ -45,9 +49,11 @@ button {
     border: none;
     cursor: pointer;
     transition: background 0.3s;
+    z-index: 2; /* Ensure it stays above the particles */
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is used */
 }
 
-button:hover {
+#cvButton:hover {
     background: #0056b3;
 }
 
@@ -67,6 +73,7 @@ footer {
     padding: 5px;
     font-size: 1rem;
     z-index: 2;
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is used */
 }
 
 /* Responsive Design */
@@ -95,4 +102,22 @@ footer {
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+.coming-soon-badge {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is used */
+}
+
+/* Pulse animation for the badge */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
