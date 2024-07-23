@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <select id="languageSwitcher" onchange="switchLanguage()">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+    </select>
+    <div id="particles-js"></div>
+    <div class="content">
+        <h1 id="name">David Gutiérrez</h1>
+        <button id="cvButton" onclick="window.location.href='assets/cv.pdf'">View My CV</button>
+    </div>
+    <footer>
+        <p id="footerText">&copy; 2024 David Gutiérrez. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>
