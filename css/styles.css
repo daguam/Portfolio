@@ -1,14 +1,14 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --primary-color: #007BFF; /* Default Blue */
+    --hover-color: #0056b3;
+    --background-color: #001f3f;
+    --footer-color: #AAAAAA;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
-    background: #001f3f;
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +22,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #001f3f;
+    background: var(--background-color);
 }
 
 .content {
@@ -36,6 +36,7 @@ h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     animation: fadeIn 2s ease-in-out;
+    color: #FFFFFF; /* Ensure text is white for contrast */
 }
 
 #cvButton {
@@ -45,7 +46,7 @@ h1 {
     font-size: 1rem;
     padding: 10px 20px;
     color: #FFFFFF;
-    background: #007BFF;
+    background: var(--primary-color);
     border: none;
     cursor: pointer;
     transition: background 0.3s;
@@ -54,7 +55,7 @@ h1 {
 }
 
 #cvButton:hover {
-    background: #0056b3;
+    background: var(--hover-color);
 }
 
 footer {
@@ -63,7 +64,7 @@ footer {
     text-align: center;
     width: 100%;
     font-size: 0.8rem;
-    color: #AAAAAA;
+    color: var(--footer-color);
 }
 
 #languageSwitcher {
@@ -86,6 +87,10 @@ footer {
         font-size: 0.9rem;
         padding: 8px 16px;
     }
+    
+    footer {
+        bottom: 30px;  /* Move footer up for mobile screens */
+    }
 }
 
 @media (max-width: 480px) {
@@ -97,6 +102,10 @@ footer {
         font-size: 0.8rem;
         padding: 6px 12px;
     }
+    
+    footer {
+        bottom: 30px;  /* Move footer up for smaller mobile screens */
+    }
 }
 
 @keyframes fadeIn {
@@ -107,7 +116,7 @@ footer {
 .coming-soon-badge {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: var(--primary-color);
     color: white;
     font-size: 1.2rem;
     border-radius: 5px;
