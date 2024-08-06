@@ -26,7 +26,7 @@ function setLanguage(language) {
             'project3-content': "TestNG testing Suite for Warrior Log's App",
             'project3-button': 'Preview Coming Soon',
             'contact-title': 'Contact Me',
-            'footerText': '&copy; 2024 David Gutiérrez. All rights reserved.'
+            'footerText': '2024 David Gutiérrez. All rights reserved.'
         },
         es: {
             'about-title': 'Sobre Mí',
@@ -46,7 +46,7 @@ function setLanguage(language) {
             'project3-content': "Suite de pruebas TestNG para la App de Warrior Log",
             'project3-button': 'Vista Previa Pronto',
             'contact-title': 'Contáctame',
-            'footerText': '&copy; 2024 David Gutiérrez. Todos los derechos reservados.'
+            'footerText': '2024 David Gutiérrez. Todos los derechos reservados.'
         }
     };
 
