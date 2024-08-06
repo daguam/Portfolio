@@ -111,11 +111,11 @@ h2 {
 }
 
 /*Language-Switcher */
-.lang-en:hover {
+.lang-en:hover, .lang-en:focus, .lang-en:active {
     color: #FFA500;
 }
 
-.lang-es:hover{
+.lang-es:hover, .lang-es:focus, .lang-es:active{
     color: #99C24D;
 }
 
