@@ -1,4 +1,6 @@
 /* particles.js configuration */
+pcolor = "#ffffff";
+
 particlesJS('particles-js', {
     particles: {
         number: {
@@ -9,13 +11,13 @@ particlesJS('particles-js', {
             }
         },
         color: {
-            value: "#ffffff"
+            value: pcolor
         },
         shape: {
             type: "circle",
             stroke: {
                 width: 0,
-                color: "#000000"
+                color: pcolor,
             },
             polygon: {
                 nb_sides: 5
@@ -44,7 +46,7 @@ particlesJS('particles-js', {
         line_linked: {
             enable: true,
             distance: 150,
-            color: "#ffffff",
+            color: pcolor,
             opacity: 0.4,
             width: 1
         },

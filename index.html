@@ -1,28 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work - David Gutierrez</title>
+    <title>David Gutierrez - Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
-    <select id="languageSwitcher" onchange="switchLanguage()">
-        <option value="en">English</option>
-        <option value="es">Español</option>
-    </select>
-    <button id="cvButton" onclick="window.location.href='assets/cv.pdf'">View My CV</button>
+    <!-- Particle background -->
     <div id="particles-js"></div>
-    <div class="content">
-        <h1 id="name">David Gutiérrez</h1>
-        <div class="coming-soon-badge">Coming Soon</div>
-    </div>
-    <footer>
+    
+    <!-- Main content wrapper -->
+    <div id="content-wrapper" class="container">
+        <!-- Header section with navigation -->
+        <header class="mb-4">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">David Gutiérrez</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main sections -->
+    <main>
+        <!-- Landing section -->
+        <section id="landing" class="text-center py-5">
+            <div class="content">
+                <h1 id="name">David Gutiérrez</h1>
+                
+            </div>
+        </section>
+        
+        <!-- About section -->
+        <section id="about" class="about-card text-center py-5">
+            <h2>About Me</h2>
+            <p class="mx-auto" style="max-width: 600px;">
+                Hello! I'm David Gutiérrez, a QA Certified Tester and Developer. I specialize in web development, automation testing, and continuous integration.
+            </p>
+            <div id="badge-container" class="my-4">
+                <a href="https://app.skillsclub.com/credential/59320-22843632af90a0505e422bb0ad0e644d5adfecf54d1be4997bc215e21971f2d5?locale=en&badge=true" target="_blank">
+                    <svg id="badge" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" stroke="var(--primary-color)" stroke-width="5" />
+                        <text x="50%" y="50%" text-anchor="middle" fill="var(--primary-color)" font-size="8" font-family="Poppins" dy=".3em">ISTQB</text>
+                        <text x="50%" y="60%" text-anchor="middle" fill="var(--primary-color)" font-size="6" font-family="Poppins" dy=".3em">CTFL 4.0</text>
+                    </svg>
+                </a>
+                <button id="cvButton" class="btn btn-primary" onclick="window.location.href='assets/cv.pdf'">View My CV</button>
+            </div>
+        </section>
+        
+        
+        <!-- Skills section -->
+        <section id="skills" class="text-center py-5">
+            <h2>Skills</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-5 mb-4">
+                    <div class="skill">
+                        <h3>Development</h3>
+                        <div class="skill-icons">
+                            <div class="skill-item">
+                                <i class="fab fa-html5 fa-3x" title="HTML5"></i>
+                                <p>HTML5</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt fa-3x" title="CSS3"></i>
+                                <p>CSS3</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js-square fa-3x" title="JavaScript"></i>
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-python fa-3x" title="Python"></i>
+                                <p>Python</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-java fa-3x" title="Java"></i>
+                                <p>Java</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-windows fa-3x" title="C#"></i>
+                                <p>C#</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database fa-3x" title="SQL Database"></i>
+                                <p>SQL Database</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill">
+                        <h3>QA Automation</h3>
+                        <div class="skill-icons">
+                            <div class="skill-item">
+                                <i class="fas fa-vial fa-3x" title="API Testing with Postman and RestAssured"></i>
+                                <p>API Testing</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-mobile-alt fa-3x" title="Cross-Device Manual Testing"></i>
+                                <p>Mobile Testing</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cogs fa-3x" title="Selenium WebDriver with Java & Eclipse"></i>
+                                <p>Selenium WebDriver</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Projects section -->
+        <section id="projects" class="text-center py-5">
+            <h2>Projects</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="project">
+                        <div class="project-content">
+                            <h3>Warrior Log</h3>
+                            <p>A self study diary to help you get your thoughts in order</p>
+                            <button href="#" class="btn btn-primary">Preview Coming Soon</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project" style="background-image: url('images/PobreDiablo.png');">
+                        <div class="project-content">
+                            <h3>Pobre Diablo</h3>
+                            <p>Unity 3D Bullet Hell game prototype using C# scripts.</p>
+                            <button onclick="location.href='https://play.unity.com/en/games/76bd1391-3b43-43b4-af32-dfb3f232d50a/pobre-diablo';" class="btn btn-primary">Play the Game</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="project">
+                        <div class="project-content">
+                            <h3>WG Test Suite</h3>
+                            <p>TestNG testing Suite for Warrior Log's App</p>
+                            <button href="#" class="btn btn-primary">Preview Coming Soon</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Contact section -->
+        <section id="contact" class="text-center py-5">
+            <h2>Contact Me</h2>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/david-eduardo-gutierrez-amarillas/" target="_blank" class="contact-icon">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                </a>
+                <a href="https://github.com/daguam" target="_blank" class="contact-icon">
+                    <i class="fab fa-github fa-3x"></i>
+                </a>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> daguam93@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +52 4421280204</p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer section -->
+    <footer class="text-center py-4">
         <p id="footerText">&copy; 2024 David Gutiérrez. All rights reserved.</p>
+        
     </footer>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/particles.js"></script>
-    <script src="js/language.js"></script>
+</div>
+
+<!-- External JavaScript files -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="js/particles.js"></script>
 </body>
+
 </html>

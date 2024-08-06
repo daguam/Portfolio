@@ -1,132 +1,359 @@
+/* Root variables for easy theming */
 :root {
-    --primary-color: #007BFF; /* Default Blue */
-    --hover-color: #0056b3;
-    --background-color: #001f3f;
-    --footer-color: #AAAAAA;
+    --primary-color: #FFA500;
+    --hover-color: #FF8C00;
+    --background-color: #333333;
+    --footer-color: #D4F4DD;
+    --text-color: #dbebef;
+    --secondary-color: #505050;
+    --secondary-opacity-color: #505050b8;
+    --font-family: 'Poppins', sans-serif;
 }
 
+/* Base styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #FFFFFF;
-    background: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+    margin: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
+/* Apply font family and text color to all text elements */
+h1, h2, h3, h4, h5, h6, p, a, ul, li, label, input, textarea, button, footer, nav, select {
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+/* Particle background */
 #particles-js {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: var(--background-color);
+    background-color: var(--background-color);
+    z-index: -1;
 }
 
-.content {
+/* Content wrapper */
+#content-wrapper {
     position: relative;
-    text-align: center;
     z-index: 1;
-    padding: 20px;
+    padding: 2rem;
 }
 
-h1 {
+/* Landing section */
+#landing {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+#name {
     font-size: 3rem;
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
-    color: #FFFFFF; /* Ensure text is white for contrast */
+    margin-bottom: 1rem;
 }
 
 #cvButton {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: solid;
+    padding: 1rem 2rem;
     font-size: 1rem;
-    padding: 10px 20px;
-    color: #FFFFFF;
-    background: var(--primary-color);
-    border: none;
     cursor: pointer;
-    transition: background 0.3s;
-    z-index: 2; /* Ensure it stays above the particles */
-    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is used */
+    transition: background-color 0.3s, transform 0.3s;
+    animation: pulseBadge 2s infinite;
 }
 
 #cvButton:hover {
-    background: var(--hover-color);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    animation: pulseBadge 2s infinite;
 }
 
-footer {
-    position: absolute;
-    bottom: 10px;
+/* General section styling */
+section {
+    padding: 4rem 0;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-icon {
+    color: var(--text-color);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.contact-info {
+    font-size: 1.25rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+.contact-info i {
+    margin-right: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Skills and projects containers */
+.skills-container,
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill {
+    padding: 1.5rem;
+    border-radius: 8px;    
     text-align: center;
-    width: 100%;
-    font-size: 0.8rem;
-    color: var(--footer-color);
+    transition: transform 0.3s;
 }
 
-#languageSwitcher {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 5px;
-    font-size: 1rem;
-    z-index: 2;
-    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is used */
+.project {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    
 }
 
-/* Responsive Design */
+.project-content {
+    position: relative;
+    z-index: 1;
+    
+}
+
+.about-card {
+
+    background-color: var(--secondary-opacity-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center
+    ;
+}
+
+.skill h3,
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill ul,
+.project p {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project button:hover {
+    background-color: var(--hover-color);
+}
+
+.project button:focus {
+    background-color: var(--hover-color);
+}
+
+
+.skill:hover,
+.project:hover {
+    transform: scale(1.05);
+}
+
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill-icons i {
+    margin: 10px;
+    color: var(--text-color);
+}
+
+.skill-icons i:hover {
+    color: var(--hover-color);
+}
+
+/* Badge Animation */
+#badge-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Adjust gap as needed */
+}
+
+#badge {
+    animation: pulseBadge 2s infinite;
+}
+
+@keyframes pulseBadge {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#badge:hover {
+    animation: bounceBadge 1s infinite;
+}
+
+@keyframes bounceBadge {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+#badge text {
+    font-size: 12px;
+}
+
+
+
+
+/* Footer styling */
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+#footerText {
+    color: var(--text-color);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) and (min-width: 769px) {
+    #landing {
+        padding: 4rem 0;
+    }
+
+    #name {
+        font-size: 2.75rem;
+    }
+
+    .skills-container,
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .skill,
+    .project {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 768px) {
-    h1 {
+    #landing {
+        padding: 3rem 0;
+    }
+
+    #name {
         font-size: 2.5rem;
     }
 
-    button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
+    .skills-container,
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        width: 100%;
     }
-    
-    footer {
-        bottom: 30px;  /* Move footer up for mobile screens */
+
+    .skill,
+    .project {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .about-card {
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 1rem;
+    }
+
+    #name {
         font-size: 2rem;
     }
 
-    button {
-        font-size: 0.8rem;
-        padding: 6px 12px;
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .skill h3,
+    .project h3 {
+        font-size: 1.25rem;
+    }
+
+    .skill,
+    .project {
+        width: 100%;
     }
     
-    footer {
-        bottom: 30px;  /* Move footer up for smaller mobile screens */
+    .about-card {
+
+        font-size: 1.25rem;
+        width: 100%;
+        margin: 0 auto;
     }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.coming-soon-badge {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    animation: pulse 2s infinite;
-    font-family: 'Poppins', sans-serif; /* Ensure Poppins font is used */
-}
-
-/* Pulse animation for the badge */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
 }
